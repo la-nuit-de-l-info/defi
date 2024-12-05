@@ -1,0 +1,12 @@
+/* -- --------------Fichier de la feature principale nuit de l'info---------------  */
+@import url('./global.css');
+@import url('./animations-nuit-info.css');
+
+*{
+    background-color: var(--bleu-marine);
+    color: var(--bleu-marine);
+}
+
+p{
+    color: var(--bleu-marine);
+}
