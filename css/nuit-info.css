@@ -2,11 +2,266 @@
 @import url('./global.css');
 @import url('./animations-nuit-info.css');
 
-*{
-    background-color: var(--bleu-marine);
-    color: var(--bleu-marine);
+* {
+    color: var(--blanc);
+    border: solid 1px red;
+    margin: 0;
+    padding: 0;
 }
 
-p{
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+:root {
+    --font-text: clamp(1rem, 1vw, 1.2rem); /* Taille du texte responsive */
+    --font-sub-title: clamp(1.4rem, 1.8vw, 2.2rem); /* Taille des titres */
+    --font-button: clamp(1.2rem, 1.5vw, 1.8rem); /* Bouton */
+}
+
+.main-containe
+    display: flex;
+    flex-direction: column;
+    /* Organise les éléments en colonne */
+    justify-content: space-between;
+    /* Centre verticalement les éléments */
+    height: 100vh;
+    /* Prend toute la hauteur de l'écran */
+    background-image: url(../img/bg-home.png);
+    object-fit: cover;
+    background-position: center;
+    /* Centre l'image */
+    background-repeat: no-repeat;
+    /* Évite les répétitions de l'image */
+    overflow: hidden;
+    /* Cache les débordements */
+
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 60%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* Style de la barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Couleur semi-transparente */
+    backdrop-filter: blur(10px); /* Flou d'arrière-plan */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilité pour les navigateurs Webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure fine et translucide */
+    padding: 10px 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis pour un effet doux */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile pour ajouter de la profondeur */
+    width:60%; /* Largeur contrôlée */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+/* Style des boutons */
+.nav-btn {
+    background-color: var(--bleu-medium);
+    width: 15%;
+    color: var(--blanc);
+    font-size: var(--font-text);
+    padding: 10px 20px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: var(--bleu-medium);
+    transform: scale(1.05);
+}
+
+.nav-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--bleu-clair);
+}
+
+.a-propos {
+    background: rgba(255, 255, 255, 0.1); /* Couleur transparente pour l'effet de verre */
+    backdrop-filter: blur(10px); /* Flou de l'arrière-plan */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilité pour les anciens navigateurs Webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre élégante */
+    color: var(--blanc); /* Couleur du texte */
+    padding: 40px 20px; /* Espacement intérieur */
+    margin: 20px auto; /* Centrage horizontal avec espace au-dessus et au-dessous */
+    max-width: 800px; /* Limite la largeur */
+    text-align: center; /* Centrage du texte */
+}
+
+/* Contenu interne */
+.a-propos-content {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Titre */
+.a-propos h1 {
+    font-size: var(--font-sub-title);
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    color: var(--blanc);
+    text-shadow: 
+        -1px -1px 0 var(--bleu-marine), /* Ombre en haut à gauche */
+        1px -1px 0 var(--bleu-marine),  /* Ombre en haut à droite */
+        -1px 1px 0 var(--bleu-marine),  /* Ombre en bas à gauche */
+        1px 1px 0 var(--bleu-marine);   /* Ombre en bas à droite */
+}
+
+/* Paragraphe */
+.a-propos p {
+    font-size: var(--font-text);
+    line-height: 1.6;
+    color: var(--blanc);
+    margin-top: 10px;
+}
+
+/* Effet au survol du conteneur */
+.a-propos:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+.start-travel {
+    text-align: center;
+    /* Centre le lien dans son conteneur */
+    margin-top: 20px;
+    /* Ajoute un espace au-dessus */
+    width: 40%;
+    margin: 0 auto;
+}
+
+.start-travel a {
+    display: inline-block;
+    /* Permet d'utiliser padding pour créer un bouton */
+    padding: 15px 30px;
+    /* Agrandit le bouton */
+    font-size: 1.5rem;
+    /* Rend le texte imposant */
+    font-weight: bold;
+    /* Renforce l'impact du texte */
+    color: var(--blanc);
+    /* Respecte la charte graphique */
+    background-color: var(--bleu-medium);
+    /* Utilise le bleu marine de votre palette */
+    border: 2px solid var(--blanc);
+    /* Encadre le bouton avec le blanc */
+    border-radius: 10px;
+    /* Ajoute des coins arrondis élégants */
+    text-decoration: none;
+    /* Supprime le soulignement par défaut */
+    transition: all 0.3s ease-in-out;
+    /* Ajoute une transition pour les effets au survol */
+}
+
+.start-travel a:hover {
+    background-color: var(--blanc);
+    /* Inverse les couleurs au survol */
     color: var(--bleu-marine);
+    /* Texte bleu marine sur fond blanc */
+    transform: scale(1.1);
+    /* Agrandit légèrement le bouton */
+}
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-btn {
+        width: 80%; /* Boutons plus grands en largeur */
+        font-size: clamp(0.9rem, 2vw, 1.2rem); /* Taille responsive des boutons */
+        margin: 10px 0; /* Espacement entre les boutons */
+    }
+
+    .a-propos {
+        padding: 20px;
+        margin: 10px;
+        max-width: 90%; /* Réduction de la largeur */
+    }
+
+    .a-propos h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem); /* Taille réduite pour les titres */
+    }
+
+    .start-travel {
+        width: 80%;
+    }
+
+    .start-travel a {
+        font-size: clamp(1rem, 4vw, 1.5rem); /* Taille du bouton */
+        padding: 10px 20px;
+    }
+}
+
+/* Pour les écrans intermédiaires (tablettes) */
+@media (min-width: 577px) and (max-width: 992px) {
+    .navbar {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .nav-btn {
+        width: 20%;
+        font-size: clamp(1rem, 2vw, 1.4rem); /* Taille adaptée */
+    }
+
+    .a-propos {
+        padding: 30px;
+        margin: 15px auto;
+        max-width: 85%;
+    }
+
+    .a-propos h1 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem); /* Titre légèrement plus grand */
+    }
+
+    .start-travel a {
+        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        padding: 12px 25px;
+    }
+}
+
+/* Pour les écrans larges (desktop) */
+@media (min-width: 993px) {
+    .navbar {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .nav-btn {
+        width: 15%;
+        font-size: clamp(1.2rem, 1vw, 1.5rem);
+    }
+
+    .a-propos {
+        padding: 40px 20px;
+        margin: 20px auto;
+        max-width: 800px;
+    }
+
+    .a-propos h1 {
+        font-size: clamp(2rem, 3vw, 3.5rem); /* Titre plus imposant */
+    }
+
+    .start-travel a {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        padding: 15px 30px;
+    }
 }
