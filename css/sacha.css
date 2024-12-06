@@ -1,0 +1,31 @@
+.rainbow-text {
+    position: absolute;
+    font-size: 4px;
+    white-space: pre; /* Conserve le format du texte */
+    color: black;
+}
+
+.active {
+    position: absolute;
+    font-size: 10px;
+    white-space: pre; /* Conserve le format du texte */
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%; /* Étend le dégradé pour le défilement */
+    animation: rainbow 0.3s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.random-position {
+    position: fixed; /* Permet de positionner par rapport au viewport */
+    transition: left 5s, top 5s;
+}
