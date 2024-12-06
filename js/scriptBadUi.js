@@ -44,24 +44,30 @@ window.addEventListener("scroll", () => {
 
 
 
-setTimeout(() => {
-  console.log("animation");
-  vibrate.classList.add("vibrate")
-}, 3000);
 
-const messages = [
-    "Merci beaucoup !",
-    "OU PAS !!!!!",
-  ];
 
   const messageElement = document.querySelector('.soutenir');
   const tremblingDiv = document.querySelector('.soutenir');
+  let videoContainer = document.querySelector('.video-container');
 
-  // Fonction pour changer le message
-  function changeMessage() {
+  tremblingDiv.addEventListener('click', () => {
+    console.log("click");
+        console.log("animation");
+        // vibrate.classList.toggle("vibrate")
+        // vibrate.classList.add("shake")
+        // videoContainer.classList.add("shake");
+
+      const messages = [
+          "Merci beaucoup !",
+          "OU PAS !!!!!",
+        ];
+        function changeMessage() {
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     messageElement.textContent = randomMessage;
   }
 
   // Change le message toutes les 2 secondes
-  setInterval(changeMessage, 2000);
+  changeMessage();
+  })
+  // Fonction pour changer le message
+
