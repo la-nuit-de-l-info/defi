@@ -1,5 +1,96 @@
-@import url('./global.css');
+/* @import url('./global.css'); */
+.fade-in {
+    animation: fadeIn 2s forwards;
+}
+
+/* @keyframes fadeIn {
+    from {
+        opacity: 1;
+        background-color: rgba(0, 64, 128, 1); 
+    }
+    to {
+        opacity: 0;
+        background-color: rgba(0, 64, 128, 0); 
+    }
+} */
+
+.image-display img {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.image-display img.show {
+    opacity: 1;
+}
+
+#transition-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out;
+}
 
 body {
-    background-image: url('../img/steak-haché.jpg');
+    background-image: url('../img/bg-home.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 64, 128, 0.8);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 64, 128, 0.8);
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-btn {
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.responsive-btn:hover {
+    background-color: #003366;
+}
+
+.explanation {
+    text-align: center;
+    background-color: rgba(0, 64, 128, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.controls {
+    text-align: center;
+}
+
+.image-display img {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.image-display img.show {
+    opacity: 1;
 }

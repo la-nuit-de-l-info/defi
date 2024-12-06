@@ -14,3 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+
+    // Ajouter la classe fade-in pour le fondu d'apparition
+    body.classList.add("fade-in");
+
+    // Retirer la classe après la durée de l'animation (2 secondes ici)
+    setTimeout(() => {
+        body.classList.remove("fade-in");
+    }, 2000); // 2000ms = 2s
+});
