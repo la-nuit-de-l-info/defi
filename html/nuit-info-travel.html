@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nuit-info-travel.css">
+    <title>Document</title>    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Exploration des organes et des équivalents marins</h1>
+            <p>Découvrez comment les organes humains trouvent leurs équivalents dans le monde marin. Cliquez sur un organe pour voir son équivalent marin, puis revenez à l'organe pour passer au suivant.</p>
+        </header>
+        <main>
+            <section class="image-display">
+                <img id="organe" class="responsive-img" src="../images/coeur.png" alt="Organe" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="mer" class="responsive-img" src="../images/maree.jpg" alt="Mer" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="suivant" class="responsive-img" src="../images/cerveau.png" alt="Organe suivant" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="poumons" class="responsive-img" src="../images/poumons.png" alt="Poumons" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="peau" class="responsive-img" src="../images/peau.png" alt="Peau" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="intestin" class="responsive-img" src="../images/intestins.png" alt="Intestin" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="reins" class="responsive-img" src="../images/reins.png" alt="Reins" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="lymphatique" class="responsive-img" src="../images/lymphatique.png" alt="Système lymphatique" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="emotions" class="responsive-img" src="../images/emotions.png" alt="Émotions" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+            </section>
+            <section class="controls">
+                <button id="retour" class="responsive-btn" style="display:none; width: 80%; padding: 10px; font-size: 1.2em; display: block; margin: 20px auto;">Retour à l'organe</button>
+            </section>
+            <section class="explanation">
+                <p id="explanation-text"></p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Nuit de l'info</p>
+        </footer>
+    </div>
+    <script src="../js/nuit-info.js"></script>
+    <!-- <script src="../js/transition.js"></script> -->
+    <img id="transition-img" class="responsive-img" src="../images/bg-home.png" alt="Transition" style="display: none; max-width: 80%; height: auto; margin: 0 auto;">
+</body>
+</html>
