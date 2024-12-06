@@ -42,6 +42,12 @@ function updateDisplay(index, showMer = false) {
     }
 }
 
+function showTransitionImage() {
+    const transitionImg = document.getElementById('transition-img');
+    transitionImg.style.display = 'block';
+    transitionImg.classList.add('show');
+}
+
 organeEl.addEventListener('click', function () {
     updateDisplay(currentIndex, true);
 });
@@ -53,6 +59,8 @@ retourEl.addEventListener('click', function () {
             currentIndex++;
             updateDisplay(currentIndex, false);
             organeEl.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            showTransitionImage();
         }
     }, 1000);
 });
