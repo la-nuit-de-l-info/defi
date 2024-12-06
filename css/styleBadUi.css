@@ -48,6 +48,7 @@ p {
   width: 100%;
 }
 .logo-anim {
+  z-index: 2;
   animation: tiltAndFall 3s ease-in-out forwards, fall 2s ease-in 3s forwards; /* 2 animations : rotation puis chute */
 }
 
@@ -69,6 +70,7 @@ p {
   }
   100% {
     transform: rotate(92deg) translateX(300vh); /* Inclinaison finale et chute de 300vh */
+    display: none;
   }
 }
 .container-nav {
@@ -94,7 +96,7 @@ p {
   color: white;
   padding: 0px 10px 0px 10px;
 }
-.soutenir .shake{
+.soutenir.shake{
     animation: shake 0.3s infinite, blink 1s infinite alternate;
 }
 @keyframes shake {
@@ -212,7 +214,13 @@ header {
   height: 100%;
   overflow: hidden;
 }
-/* @keyframes glitch {
+
+
+.glitch {
+  animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
   0% {
       transform: translate(0, 0) scale(1);
       filter: hue-rotate(0deg);
@@ -236,13 +244,7 @@ header {
   100% {
       transform: translate(5px, 5px) scale(1);
       filter: hue-rotate(0deg);
-  }
-} */
-
-
-.video-container video .glitch {
-  animation: glitch 0.5s infinite;
-}
+  }}
 .terence {
     position: relative;
     height: 100vh;

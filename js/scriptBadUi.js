@@ -5,6 +5,7 @@ let mouetteCote = document.getElementById("mouette-cote");
 let burgerMenuButton = document.querySelector(".burger-menu-button")
 let burgerMenu = document.querySelector(".burger-menu")
 let vibrate =  document.querySelector(".soutenir");
+let odysse = document.querySelector(".odysse");
 console.log("vibrate",vibrate);
 
 
@@ -32,11 +33,13 @@ window.addEventListener("scroll", () => {
         case (scrollY >= 250): // Niveau 2 : au-delà de 300px
             console.log("Action 2 : au-delà de 300px");
             mouetteCote.classList.add("penche")
+            odysse.classList.add("logo-anim")
             break;
 
         default: // Aucun niveau atteint
             console.log("Aucune action");
             mouetteCote.classList.remove("penche")
+            odysse.classList.remove("penche")
 
             break;
     }
@@ -48,14 +51,19 @@ window.addEventListener("scroll", () => {
 
   const messageElement = document.querySelector('.soutenir');
   const tremblingDiv = document.querySelector('.soutenir');
-  let videoContainer = document.querySelector('.video-container');
+  let videoContainer = document.querySelector('video');
+  console.log("vide",videoContainer);
+  
 
   tremblingDiv.addEventListener('click', () => {
     console.log("click");
         console.log("animation");
-        // vibrate.classList.toggle("vibrate")
-        // vibrate.classList.add("shake")
-        // videoContainer.classList.add("shake");
+        vibrate.classList.toggle("vibrate")
+        vibrate.classList.toggle("shake")
+        videoContainer.classList.toggle("shake");
+        videoContainer.classList.toggle("glitch");
+        videoContainer.classList.toggle("blink");
+        videoContainer.classList.toggle("vibrate");
 
       const messages = [
           "Merci beaucoup !",
