@@ -1,0 +1,292 @@
+* {
+  /* outline: 2px solid red; */
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.nav {
+    z-index: 1;
+  top: 5px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  height: 13vh;
+  width: 100vw;
+  background-color: transparent;
+}
+
+.odysse {
+  top: 15%;
+  left: 5%;
+  position: absolute;
+  height: 310px;
+  width: 340px;
+}
+.odysse,
+p {
+  color: white;
+  font-size: 1.5rem;
+  /* font-: ; */
+}
+.texte {
+  text-align: auto;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+}
+.logo {
+  transform-origin: bottom left; /* Définit l'origine au coin bas-gauche */
+  width: 100%;
+}
+.logo-anim {
+  animation: tiltAndFall 3s ease-in-out forwards, fall 2s ease-in 3s forwards; /* 2 animations : rotation puis chute */
+}
+
+@keyframes tiltAndFall {
+  0% {
+    transform: rotate(0deg) translateY(0); /* Position initiale */
+  }
+  20% {
+    transform: rotate(95deg) translateY(0); /* Inclinaison à 95° */
+  }
+  40% {
+    transform: rotate(60deg) translateY(0); /* Retour partiel à 60° */
+  }
+  60% {
+    transform: rotate(90deg) translateY(0); /* Retour à 90° */
+  }
+  80% {
+    transform: rotate(90deg) translatex(100vh); /* Début de la chute, tombe de 50vh */
+  }
+  100% {
+    transform: rotate(92deg) translateX(300vh); /* Inclinaison finale et chute de 300vh */
+  }
+}
+.container-nav {
+  width: 33%;
+  display: flex;
+  align-items: center;
+}
+
+.container-nav .title {
+  font-size: 4rem;
+  color: white;
+}
+.soutenir {
+  display: flex;
+  width: 170px;
+  height: 40px;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-evenly;
+  border: solid 1px white;
+  border-radius: 1.5rem;
+  font-size: 1.3rem;
+  color: white;
+  padding: 0px 10px 0px 10px;
+  animation: shake 0.3s infinite, blink 1s infinite alternate;
+}
+
+@keyframes shake {
+  0% {
+      transform: translate(0, 0);
+  }
+
+  25% {
+      transform: translate(2px, -2px);
+  }
+
+  50% {
+      transform: translate(-2px, 2px);
+  }
+
+  75% {
+      transform: translate(-2px, -2px);
+  }
+
+  100% {
+      transform: translate(2px, 2px);
+  }
+}
+@keyframes blink {
+
+  0%,
+  100% {
+      background-color: #007bff;
+      color: rgb(3, 233, 91);
+  }
+
+  50% {
+      background-color: #ff5555;
+      color: yellow;
+  }
+}
+
+.vibrate {
+  animation: vibrate 0.1s infinite linear;
+
+}
+
+@keyframes vibrate {
+  0% {
+      transform: translate(1px, 1px);
+  }
+
+  25% {
+      transform: translate(-1px, -1px);
+  }
+
+  50% {
+      transform: translate(-1px, 1px);
+  }
+
+  75% {
+      transform: translate(1px, -1px);
+  }
+
+  100% {
+      transform: translate(1px, 1px);
+  }
+}
+
+
+@keyframes fade-in-out {
+  0% {
+      opacity: 0;
+  }
+
+  20% {
+      opacity: 1;
+  }
+
+  80% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+.soutenir-burger {
+  display: flex;
+  justify-content: space-around;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.burger-menu-button {
+    width: 30px;
+    height: 30px;
+  }
+  .burger-menu-button:hover {
+    cursor: pointer;
+  }
+  
+
+header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.video-container {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+@keyframes glitch {
+  0% {
+      transform: translate(0, 0) scale(1);
+      filter: hue-rotate(0deg);
+  }
+
+  25% {
+      transform: translate(-5px, 5px) scale(1.02);
+      filter: hue-rotate(30deg);
+  }
+
+  50% {
+      transform: translate(5px, -5px) scale(0.98);
+      filter: hue-rotate(60deg);
+  }
+
+  75% {
+      transform: translate(-5px, -5px) scale(1.01);
+      filter: hue-rotate(90deg);
+  }
+
+  100% {
+      transform: translate(5px, 5px) scale(1);
+      filter: hue-rotate(0deg);
+  }
+}
+
+.video-container video {
+  animation: glitch 0.5s infinite;
+}
+
+.terence {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.mouette{
+}
+#mouette-cote{
+    position: absolute;
+    top: -150px;
+    right: -190px;
+
+}
+.penche {
+    transform: rotate(-35deg) translateX(-70px);
+    transition: transform 0.8s ease-in-out; /* Transition fluide sur 0.5 seconde */
+}
+
+.penchePlus {
+    transform: rotate(0deg) translateX(-70px);
+    transition: transform 0.8s ease-in-out; /* Transition fluide sur 0.5 seconde */
+}
+
+
+.container {
+    padding: 30px;
+    border: solid 2px red;
+    display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  color: white;
+  font-size: 2rem;
+}
+.text {
+  border: solid 2px red;
+  width: 30%;
+  height: 30%;
+  font-size: small;
+}
+.game-cookie {
+  border: solid 2px red;
+  width: 30%;
+  height: 30%;
+}
+.cookie-img {
+  width: 80%;
+}
