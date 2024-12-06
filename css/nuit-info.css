@@ -20,7 +20,7 @@ body {
     --font-button: clamp(1.2rem, 1.5vw, 1.8rem); /* Bouton */
 }
 
-.main-containe
+.main-container {
     display: flex;
     flex-direction: column;
     /* Organise les éléments en colonne */
