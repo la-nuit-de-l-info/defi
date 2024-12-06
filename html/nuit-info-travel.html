@@ -1,0 +1,71 @@
+<!-- --------------Fichier de la feature principale nuit de l'info--------------- -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nuit-info.css">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Couleur de fond claire pour un meilleur contraste */
+            color: #333; /* Couleur de texte sombre pour une meilleure lisibilité */
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #004080; /* Couleur de fond du header */
+            color: #fff; /* Couleur de texte du header */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004080; /* Couleur de fond du footer */
+            color: #fff; /* Couleur de texte du footer */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff; /* Couleur de fond du conteneur */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+        }
+        .responsive-btn {
+            background-color: #004080; /* Couleur de fond du bouton */
+            color: #fff; /* Couleur de texte du bouton */
+            border: none;
+            cursor: pointer;
+        }
+        .responsive-btn:hover {
+            background-color: #003366; /* Couleur de fond du bouton au survol */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Exploration des organes et des équivalents marins</h1>
+        </header>
+        <main>
+            <section class="image-display">
+                <img id="organe" class="responsive-img" src="../images/coeur.png" alt="Organe" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="mer" class="responsive-img" src="../images/maree.jpg" alt="Mer" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="suivant" class="responsive-img" src="../images/cerveau.png" alt="Organe suivant" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="poumons" class="responsive-img" src="../images/poumons.png" alt="Poumons" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="peau" class="responsive-img" src="../images/peau.png" alt="Peau" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="intestin" class="responsive-img" src="../images/intestins.png" alt="Intestin" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="reins" class="responsive-img" src="../images/reins.png" alt="Reins" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="lymphatique" class="responsive-img" src="../images/lymphatique.png" alt="Système lymphatique" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="emotions" class="responsive-img" src="../images/emotions.png" alt="Émotions" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+            </section>
+            <section class="controls">
+                <button id="retour" class="responsive-btn" style="display:none; width: 80%; padding: 10px; font-size: 1.2em; display: block; margin: 20px auto;">Retour à l'organe</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Nuit de l'info</p>
+        </footer>
+    </div>
+    <script src="../js/nuit-info.js"></script>
+</body>
+</html>
