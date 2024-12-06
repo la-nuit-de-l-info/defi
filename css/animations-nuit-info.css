@@ -1,2 +1,15 @@
 @import url('./global.css');
 
+.fade-out {
+    animation: fadeOut 1s forwards; /* Animation pour masquer la page */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
