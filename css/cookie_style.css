@@ -1,0 +1,131 @@
+/* Taille de base du cookie */
+.cookie {
+    width: 20vw; /* Utilisation de 20% de la largeur de l'écran pour un effet responsive */
+    height: 150vw; /* Hauteur de 150% de la largeur de l'écran pour un aspect plus allongé */
+    cursor: pointer;
+    clip-path: circle(38%);
+    -webkit-clip-path: circle(38%);
+    transition: transform 0.2s ease;
+}
+
+/* Taille du cookie quand il est cliqué (grand) */
+.cookie.clicked {
+    transform: scale(1.2);
+}
+
+/* Container du cookie */
+.cookie-container {
+    width: auto; 
+    height: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.cookie-red {
+    filter: hue-rotate(120deg); 
+    cursor: not-allowed; /* Empêche les clics sur le cookie */
+}
+
+.spam-popup {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid black;
+    box-shadow: 0 0 15px black;
+    animation: wiggle 0.2s infinite; /* Animation pour un effet de tremblement */
+    z-index: 1000;
+    transition: left 10s linear; /* Animation de glissement */
+}
+
+/* Animation tremblement */
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+}
+
+
+/* Animation pour la disparition du cookie */
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Message pour inciter à activer le son */
+.sound-tip {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 0, 0.9);
+    color: black;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: pulse 1s infinite alternate;
+}
+
+/* Animation pour attirer l'attention */
+@keyframes pulse {
+    from {
+        transform: translateX(-50%) scale(1);
+    }
+    to {
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+/* Appliquer l'animation au cookie lorsqu'il doit disparaître */
+.cookie.hidden {
+    animation: disappear 0.3s forwards;
+}
+
+
+/* Responsive pour les petits écrans (moins de 600px) */
+@media (max-width: 600px) {
+    .cookie {
+        width: 40vw; /* Plus grand sur les petits écrans */
+        height: 40vw; /* Hauteur ajustée pour garder un aspect circulaire */
+    }
+}
+
+/* Responsive pour les écrans de taille moyenne (entre 601px et 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .cookie {
+        width: 25vw; /* Taille intermédiaire pour les tablettes ou petits écrans */
+        height: 25vw; /* Hauteur ajustée pour garder un aspect circulaire */
+    }
+}
+
+/* Responsive pour les grands écrans (plus de 1024px) */
+@media (min-width: 1025px) {
+    .cookie {
+        width: 15vw; /* Plus petit sur les grands écrans */
+        height: 15vw; /* Hauteur ajustée pour garder un aspect circulaire */
+    }
+}
