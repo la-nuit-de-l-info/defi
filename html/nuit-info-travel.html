@@ -23,6 +23,7 @@
                 <img id="reins" class="responsive-img" src="../images/reins.png" alt="Reins" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
                 <img id="lymphatique" class="responsive-img" src="../images/lymphatique.png" alt="Système lymphatique" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
                 <img id="emotions" class="responsive-img" src="../images/emotions.png" alt="Émotions" style="display:none; max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                <img id="transition-img" class="responsive-img" src="../images/image.webp" alt="Transition" style="display: none; max-width: 100%; height: auto; margin: 0 auto;">
             </section>
             <section class="controls">
                 <button id="retour" class="responsive-btn" style="display:none; width: 80%; padding: 10px; font-size: 1.2em; display: block; margin: 20px auto;">Retour à l'organe</button>
@@ -30,13 +31,31 @@
             <section class="explanation">
                 <p id="explanation-text"></p>
             </section>
+            <section class="start-travel">
+                <a href="next-page.html">Commencer le voyage</a>
+            </section>
         </main>
         <footer>
             <p>&copy; 2024 Nuit de l'info</p>
         </footer>
     </div>
     <script src="../js/nuit-info.js"></script>
-    <!-- <script src="../js/transition.js"></script> -->
-    <img id="transition-img" class="responsive-img" src="../images/bg-home.png" alt="Transition" style="display: none; max-width: 80%; height: auto; margin: 0 auto;">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startTravelLink = document.querySelector('.start-travel a');
+            const transitionImg = document.getElementById('transition-img');
+
+            if (startTravelLink) {
+                startTravelLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    transitionImg.style.display = 'block';
+                    transitionImg.classList.add('show');
+                    setTimeout(() => {
+                        window.location.href = startTravelLink.href;
+                    }, 2000); // 2 secondes pour l'animation de transition
+                });
+            }
+        });
+    </script>
 </body>
 </html>
